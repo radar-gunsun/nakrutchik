@@ -21,7 +21,7 @@
 
     let qsa = (s) => frame.document.querySelectorAll(s);
 
-    var baseUrl="https://lawyers-advokat.blogspot.com"; //Первый URL, на который нужно перейти
+    var baseUrl="https://lawyers-advokat.blogspot.com?m=0"; //Первый URL, на который нужно перейти
     var referrerUrls=["https://google.com","https://yandex.ru","" ,"https://mail.ru"];//Список URL-адресов, один из которых будет передан в качестве реферера.
     var referrerUrl=rnd(referrerUrls);//URL, который будет передан в качестве реферера.
 
@@ -37,11 +37,11 @@
     for(x=0;x<clickCount;x++)
     {
 
-        var els=qsa('a[href*="lawyers"]');//Выбираем все ссылки, содержащие слово jetswap
+        var els=qsa('a[href*="lawyers"]');//Выбираем все ссылки, содержащие слово lawyers
         var el=rnd(els);//Из выбранных ссылок выбираем случайную
 
         await clickAsync(el,{frameReloadEvent: "DOMContentLoaded"});//Кликаем по случайно выбранной ссылке и ждем перезагрузку страницы
-        var pause=rndInt(1000,3000);//Делаем случайную паузу от 1 до 3 секунд
+        var pause=rndInt(1000,4000);//Делаем случайную паузу от 1 до 4 секунд
         await waitAsync(pause);
 
         await move(frame);//Вызываем функцию случайного перемещения мыши по документу (описана выше)
