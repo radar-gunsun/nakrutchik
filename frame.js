@@ -2,7 +2,7 @@
 
     // Последовательно извлекаем необходимый фрейм. 
     // Сначала выбираем фрейм с индексом 0, затем вложенный в него фрейм, содержащий в URL текст ?query, затем вложенный в него фрейм с индексом 1
-    let frame = await selectFrameAsync([0, 'https://catcut.net/aaa.php', 1]); 
+    let frame = await selectFrameAsync([0, 'https://catcut.net/aaa.php?a=*', 1]); 
 
 
     if(frame === null) {
