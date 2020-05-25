@@ -22,7 +22,7 @@
     let qsa = (s) => frame.document.querySelectorAll(s);
 
     var baseUrl="https://gardenerbusiness.blogspot.com?m=0"; //Первый URL, на который нужно перейти
-    var referrerUrls=["https://google.com","https://yandex.ru","" ,"https://mail.ru"];//Список URL-адресов, один из которых будет передан в качестве реферера.
+    var referrerUrls=["https://www.liveinternet.ru/users/hanter_123/post470717794//"," "," " ," "];//Список URL-адресов, один из которых будет передан в качестве реферера.
     var referrerUrl=rnd(referrerUrls);//URL, который будет передан в качестве реферера.
 
     var frame=await navigateAsync(baseUrl,referrerUrl,{onFrame: "DOMContentLoaded"}); //делаем переход на заданный baseUrl с передачей referrerUrl в качестве реферера, а также ждем перезагрузки страницы
