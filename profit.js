@@ -21,7 +21,7 @@
 
     let qsa = (s) => frame.document.querySelectorAll(s);
 
-    var baseUrl="https://lawyers-advokat.blogspot.com?m=0"; //Первый URL, на который нужно перейти
+    var baseUrl="https://gardenerbusiness.blogspot.com?m=0"; //Первый URL, на который нужно перейти
     var referrerUrls=["https://google.com","https://yandex.ru","" ,"https://mail.ru"];//Список URL-адресов, один из которых будет передан в качестве реферера.
     var referrerUrl=rnd(referrerUrls);//URL, который будет передан в качестве реферера.
 
@@ -37,7 +37,7 @@
     for(x=0;x<clickCount;x++)
     {
 
-        var els=qsa('a[href*="lawyers"]');//Выбираем все ссылки, содержащие слово lawyers
+        var els=qsa('a[href*="gardenerbusiness"]');//Выбираем все ссылки, содержащие слово lawyers
         var el=rnd(els);//Из выбранных ссылок выбираем случайную
 
         await clickAsync(el,{frameReloadEvent: "DOMContentLoaded"});//Кликаем по случайно выбранной ссылке и ждем перезагрузку страницы
